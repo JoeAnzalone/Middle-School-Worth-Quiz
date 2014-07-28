@@ -64,8 +64,16 @@ button {
     cursor: pointer;
 }
 
+.github-plain {
+    display: none;
+}
+
 @media screen and (max-width: 450px){
     .github-fork-ribbon-wrapper {
-        visibility: hidden;
+        display: none;
+    }
+
+    .github-plain {
+        display: block;
     }
 }
