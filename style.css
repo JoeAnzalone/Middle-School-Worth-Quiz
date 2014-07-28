@@ -1,0 +1,55 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 19px;
+}
+
+.page-wrap {
+    margin: 0 auto;
+    max-width: 725px;
+}
+
+.total {
+    font-size: 2em;
+    margin: 0.25em 0;
+    font-weight: bold;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    background-color: #e4e4e4;
+    border-radius: 0.2em;
+    margin-top: 0.25em;
+    padding: 0.5em;
+    list-style: none;
+    border: 1px solid transparent;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+li:hover,
+li:focus {
+    background-color: #e8ffc5;
+}
+
+li.active {
+    background-color: #d8ff9d;
+    border: 1px solid #aaa;
+}
+
+button {
+    cursor: pointer;
+}

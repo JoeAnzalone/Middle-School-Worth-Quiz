@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Middle School Worth Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gh-ribbon.css">
+</head>
+<body ng-app="mswq">
+
+<div class="page-wrap">
+
+    <div ng-controller="QuizCtrl as quiz">
+        <div class="total">Your worth: {{ quiz.scoreTotal | currency:"$" }}</div>
+
+        <div>
+            (According to <a href="http://ihavenotfailed.tumblr.com/4661078294" target="_blank">this ridiculous thing</a>)
+            <button ng-show="quiz.scoreTotal" ng-click="quiz.reset()">Start over</button>
+        </div>
+
+        <ul>
+            <li ng-class="{ active:thing.active }" ng-repeat="thing in quiz.things" ng-click="quiz.toggleThing(thing)">{{ thing.thing }} ({{ thing.points | currency:"$" }})</li>
+        </ul>
+
+        <div class="total">Your worth: {{ quiz.scoreTotal | currency:"$" }}</div>
+    </div>
+
+</div>
+
+<div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/JoeAnzalone/Middle-School-Worth-Quiz" target="_blank">Fork me on GitHub</a>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script type="text/JavaScript" src="app.js"></script>
+</body>
+</html>
