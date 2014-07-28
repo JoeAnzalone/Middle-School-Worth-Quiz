@@ -19,6 +19,16 @@ body {
     font-weight: bold;
 }
 
+.subheading {
+    min-height: 25px;
+}
+
+.points {
+    color: #7a7a7a;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -52,4 +62,10 @@ li.active {
 
 button {
     cursor: pointer;
+}
+
+@media screen and (max-width: 450px){
+    .github-fork-ribbon-wrapper {
+        visibility: hidden;
+    }
 }
